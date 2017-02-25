@@ -11,7 +11,7 @@ You are tasked to two components: `UserDisplay` and `UserInfoCollect`.
 
 The latter is populated with information typed by the user and the former gets updated when a submit button is pressed.
 
-You are free to collect as much information as you wish, just be sure to include at least name, surname and level; also, using different input fields (select or checkbox fields, textareas, etc) is highly recommended.
+You are free to collect as much information as you wish, just be sure to include at least first name, surname and level; also, using different input fields (select or checkbox fields, textareas, etc) is highly recommended.
 
 ```
 const menuItems = [
