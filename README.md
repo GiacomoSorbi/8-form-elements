@@ -11,7 +11,7 @@ You are tasked to two components: `UserDisplay` and `UserInfoCollect`.
 
 The latter is populated with information typed by the user and the former gets updated when a submit button is pressed.
 
-You are free to collect as many information as you wish, just be sure to include at least name, surname and level; also, using different input fields (select or checkbox fields, textareas, etc) is highly recommended.
+You are free to collect as much information as you wish, just be sure to include at least name, surname and level; also, using different input fields (select or checkbox fields, textareas, etc) is highly recommended.
 
 ```
 const menuItems = [
@@ -24,7 +24,7 @@ const menuItems = [
 
 ## Extra notes and tips
 
-How woould you split each components into subcompoments? Is it worth it? If so, why? Otherwise, why not?
+How would you split each components into subcompoments? Is it worth it? If so, why? Otherwise, why not?
 
 How could you make the `UserInfoCollect` disappear when the submit button is pressed? How could you make it appear again when an "edit profile" button is pressed?
 
