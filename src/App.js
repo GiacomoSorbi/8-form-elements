@@ -64,7 +64,7 @@ class App extends Component {
   }
 
   render() {
-    const {formData: {firstName, lastName, level, bio, languages}, showResults} = this.state;
+    const {formData: {firstName, lastName, level, bio}, showResults} = this.state;
     return (
       <div className="App">
         <UserInfoCollect 
