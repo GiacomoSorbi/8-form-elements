@@ -13,13 +13,33 @@ The latter is populated with information typed by the user and the former gets u
 
 You are free to collect as much information as you wish, just be sure to include at least name, surname and level; also, using different input fields (select or checkbox fields, textareas, etc) is highly recommended.
 
+Quick Example of how to manage a React Form:
+
 ```
-const menuItems = [
-  {title: 'Home', classes: 'menu-main', action: () => {setState({display: 'home'})}, status: 'enabled'},
-  {title: 'Our products', classes: 'menu-opt', action: () => {setState({display: 'products'})}, status: 'enabled'},
-  {title: 'About us', classes: 'menu-opt', action: () => {setState({display: 'aboutUs'})}, status: 'enabled'},
-  {title: 'Special offers', classes: 'menu-opt', action: () => {setState({display: 'specialOffers'})}, status: 'disabled'}
-];
+class YourForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: []};
+  }
+  handleChange(event, index) {
+    this.setState({value[index]: event.target.value});
+  }
+  handleSubmit(event) {
+    callAPIMemo({payload: this.state.value});
+    event.preventDefault();
+  }
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+         <input type="radio" name="salutation" value="mr"  onChange={::this.handleChange(event, 0)}  /> Mr. 
+         <input type="radio" name="salutation" value="Mrs" onChange={::this.handleChange(event, 0)} /> Mrs.
+         <input type="text" placeholder=”Name” onChange={::this.handleChange(event, 1)} />
+         <input type="text" placeholder=”Surname” onChange={::this.handleChange(event, 2)} />
+         <input type="submit" value="Submit" />
+      </form>
+    );
+  }
+}
 ```
 
 ## Extra notes and tips
